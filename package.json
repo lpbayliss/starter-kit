@@ -30,6 +30,7 @@
 		"better-auth": "^1.2.3",
 		"better-sqlite3": "^11.8.1",
 		"chalk": "^5.4.1",
+		"classnames": "^2.5.1",
 		"dotenv": "^16.4.7",
 		"drizzle-kit": "^0.30.4",
 		"drizzle-orm": "^0.39.3",

@@ -146,6 +146,13 @@ pnpm build-storybook        # Build Storybook
 - **SHOULD** use structured logging with correlation IDs
 - **MAY** use Storybook for component documentation
 
+## Data Fetching & Mutations
+- **MUST** use React Query wth tRPC for all data operations
+  - Use `useQuery` for GET requests
+  - Use `useMutation` for POST/PUT/DELETE requests
+  - Use `useSubscription` for SSE and WebSocket requests
+- **MUST** wrap all data operations in a custom hook; do not use react-query directly in components
+
 ### Environment Variables Required
 - `DATABASE_URL` - PostgreSQL connection string
 - `GITHUB_CLIENT_ID` & `GITHUB_CLIENT_SECRET` - GitHub OAuth credentials
