@@ -1,13 +1,17 @@
 # Create React Component
 
 ## Task Overview
-Create production-ready React components following these specifications. Requirements are categorized by importance using MUST (mandatory), SHOULD (strongly recommended), and MAY (optional).
+
+Create production-ready React components following these specifications.
+
+Requirements are categorized by importance using MUST (mandatory), SHOULD (strongly recommended), and MAY (optional).
 
 ## Component Description
 
 $ARGUMENTS
 
-### Component Structure
+## Rules
+
 - **MUST** use functional components with arrow function syntax
   ```tsx
   const ComponentName = () => { ... }
@@ -21,31 +25,18 @@ $ARGUMENTS
   1. `ComponentName.tsx` - Main component implementation
   2. `ComponentName.test.tsx` - Unit/integration tests
   3. `ComponentName.stories.tsx` - Storybook stories
-
-### Styling & Data Management
 - **MUST** use Tailwind CSS for all styling (no inline styles or CSS modules)
 - **MUST** use `classnames` utility for combining CSS classes conditionally, imported as `cn`
-- **MUST** use React Query wth tRPC for all data operations
-  - Use `useQuery` for GET requests
-  - Use `useMutation` for POST/PUT/DELETE requests
-  - Use `useSubscription` for SSE and WebSocket requests
-- **MUST** wrap all data operations in a custom hook; do not use react-query directly in components
-
-### Code Organization
-- **SHOULD** wrap complex logic in custom hooks when it reduces component complexity
-  - **SHOULD** run `/project:create-hook` to create a hook
+- **MUST** create component under `/(client)/components`
+- **MUST** co-locate prop types with the components
+- **MUST** use `ComponentNameProps`
 - **SHOULD** decompose components larger than 100 lines into smaller sub-components
 - **SHOULD** define TypeScript types for all props
 - **SHOULD** place used hooks at the top of the component function
 - **SHOULD** group related state variables together
-
-### File Structure
-- **MUST** create component under `/(client)/components`
-- **MUST** co-locate prop types with the components
-  - **SHOULD** use `type` over `interface` when possible
-  - **MUST** use `ComponentNameProps`
-  - **SHOULD** use `PropsWithChildren<ComponentNameProps>` is children are required
-  - **SHOULD** not explain props with comments unless ambiguous
+- **SHOULD** use `type` over `interface` when possible
+- **SHOULD** use `PropsWithChildren<ComponentNameProps>` is children are required
+- **SHOULD** not explain props with comments unless ambiguous
 - **SHOULD** organize components in a folder structure:
   ```
   /ComponentName
@@ -54,8 +45,6 @@ $ARGUMENTS
     ├── ComponentName.stories.tsx
     └── /SubComponentFolder         (if decomposed)
   ```
-
-### Additional Patterns
 - **MAY** use compound component pattern for complex UI compositions
 - **MAY** implement error boundaries for components that fetch data
 - **MAY** memoize expensive computations with `useMemo`
@@ -83,7 +72,7 @@ $ARGUMENTS
   - **SHOULD** add JSDoc comments for complex props
   - **MAY** include usage examples in stories
 
-## Example Component Template
+## Example Component
 
 ```tsx
 // UserProfile.tsx
