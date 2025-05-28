@@ -37,6 +37,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                     Welcome, {session.user.name}
                   </span>
                   <button
+                    type="button"
                     onClick={handleSignOut}
                     className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
                   >
@@ -45,6 +46,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                 </div>
               ) : (
                 <button
+                  type="button"
                   onClick={handleSignIn}
                   className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
