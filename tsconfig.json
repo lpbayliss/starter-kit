@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"module": "ESNext",
+		"noEmit": true,
+		"moduleResolution": "Bundler",
+		"target": "ES2022",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"types": [
+			"node",
+			"vite/client",
+			"vike-react",
+			"jest",
+			"@testing-library/jest-dom"
+		],
+		"jsx": "preserve",
+		"jsxImportSource": "react"
+	},
+	"exclude": ["dist"]
+}

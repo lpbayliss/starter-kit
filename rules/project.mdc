@@ -1,0 +1,19 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# About this project
+
+This project is built with vikejs, using hono for the backend and react for the frontend.
+It is implemented with react, hono, better-auth, drizzle, vikejs, storybook, trpc, vite, vitest, tailwind
+
+- ./(client) contains the UI for this project
+    - ./(client)/components are where all react components should live
+    - ./(client)/hooks are where all react hooks should live
+    - ./(client)/pages/* are where all the route components live
+- ./assets are for all files that are served to the frontend
+- ./auth contains all (most) the better-auth related config and code
+- ./drizzle contains all (most) the drizzle-orm config and code
+- ./server contains all (most) of the server side code
+- ./stories contains all of the storybook stories
