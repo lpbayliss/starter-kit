@@ -1,8 +1,5 @@
 import type { Context, Hono, Next } from "hono";
-import {
-	runWithContext,
-	Context as AppContext,
-} from "../utils/context";
+import { runWithContext, Context as AppContext } from "../utils/context";
 
 export const withAppContext = (app: Hono) => {
 	app.use(async (c: Context, next: Next) => {
@@ -10,10 +7,10 @@ export const withAppContext = (app: Hono) => {
 			const requestId = crypto.randomUUID();
 
 			// Set initial context values
-			AppContext.set("requestId", requestId)
-			AppContext.set("requestPath", c.req.path)
-			AppContext.set("method", c.req.method)
-			AppContext.set("startTime", Date.now())
+			AppContext.set("requestId", requestId);
+			AppContext.set("requestPath", c.req.path);
+			AppContext.set("method", c.req.method);
+			AppContext.set("startTime", Date.now());
 
 			// Add request ID to response headers
 			c.header("X-Request-ID", requestId);

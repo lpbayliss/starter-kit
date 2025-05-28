@@ -24,7 +24,9 @@ export function dbPostgres() {
 			logger.info("Successfully connected to database");
 		} catch (error) {
 			logger.error("Failed to connect to database", { error });
-			throw new Error("Database connection failed. Please ensure the database is running and accessible.");
+			throw new Error(
+				"Database connection failed. Please ensure the database is running and accessible.",
+			);
 		}
 	}
 

@@ -1,4 +1,5 @@
 {
+	"name": "@lpbayliss/starter-kit",
 	"scripts": {
 		"dev": "vike dev",
 		"build": "vike build",
