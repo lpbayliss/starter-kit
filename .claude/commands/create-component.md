@@ -12,6 +12,11 @@ $ARGUMENTS
 
 ## Rules
 
+- **MUST** create the following three files for every component:
+  2. `component-name.test.tsx` - Unit/integration tests
+  1. `component-name.tsx` - Main component implementation
+  3. `component-name.stories.tsx` - Storybook stories
+- **MUST** create component under `/(client)/components/ComponentName/`
 - **MUST** use functional components with arrow function syntax
   ```tsx
   const ComponentName = () => { ... }
@@ -21,15 +26,10 @@ $ARGUMENTS
   export default ComponentName
   ```
 - **MUST** use TitleCase for all component names (e.g., `UserProfile`, `DataTable`)
-- **MUST** create three files for every component:
-  1. `ComponentName.tsx` - Main component implementation
-  2. `ComponentName.test.tsx` - Unit/integration tests
-  3. `ComponentName.stories.tsx` - Storybook stories
 - **MUST** use Tailwind CSS for all styling (no inline styles or CSS modules)
 - **MUST** use `classnames` utility for combining CSS classes conditionally, imported as `cn`
-- **MUST** create component under `/(client)/components`
 - **MUST** co-locate prop types with the components
-- **MUST** use `ComponentNameProps`
+- **MUST** use `ComponentNameProps` for prop type definition
 - **SHOULD** decompose components larger than 100 lines into smaller sub-components
 - **SHOULD** define TypeScript types for all props
 - **SHOULD** place used hooks at the top of the component function
@@ -37,14 +37,6 @@ $ARGUMENTS
 - **SHOULD** use `type` over `interface` when possible
 - **SHOULD** use `PropsWithChildren<ComponentNameProps>` is children are required
 - **SHOULD** not explain props with comments unless ambiguous
-- **SHOULD** organize components in a folder structure:
-  ```
-  /ComponentName
-    ├── ComponentName.tsx
-    ├── ComponentName.test.tsx
-    ├── ComponentName.stories.tsx
-    └── /SubComponentFolder         (if decomposed)
-  ```
 - **MAY** use compound component pattern for complex UI compositions
 - **MAY** implement error boundaries for components that fetch data
 - **MAY** memoize expensive computations with `useMemo`
