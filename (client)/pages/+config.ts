@@ -14,4 +14,7 @@ export default {
 	description: "Demo showcasing Vike",
 
 	extends: [vikeReact, vikeReactQuery],
+	
+	// Serialize these values to the client-side
+	passToClient: ['locale', 'messages']
 } satisfies Config;

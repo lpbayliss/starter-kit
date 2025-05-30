@@ -1,0 +1,11 @@
+{
+	"language.en": "Anglais",
+	"language.fr": "Français",
+	"language.switcher.label": "Sélectionner la langue",
+	"nav.home": "Accueil",
+	"nav.about": "À propos",
+	"loading": "Chargement...",
+	"error.general": "Une erreur s'est produite",
+	"error.notFound": "Page introuvable",
+	"signin.plead": "Frenchly sign in"
+}

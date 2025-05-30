@@ -7,6 +7,8 @@ import {
 } from "@trpc/client";
 import { type ReactNode, useState } from "react";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { IntlProvider } from "react-intl";
+import { useMessages } from "../hooks/useMessages";
 
 import { TRPCProvider } from "../../trpc/client";
 import type { AppRouter } from "../../trpc/server";
@@ -40,6 +42,7 @@ function getQueryClient() {
 }
 
 export default function Wrapper({ children }: { children: ReactNode }) {
+	const { locale, messages, isLoading } = useMessages();
 	const queryClient = getQueryClient();
 	const [trpcClient] = useState(() =>
 		createTRPCClient<AppRouter>({
@@ -58,10 +61,20 @@ export default function Wrapper({ children }: { children: ReactNode }) {
 		}),
 	);
 
+	if (isLoading) {
+		return <div>Loading...</div>;
+	}
+
 	return (
 		<QueryClientProvider client={queryClient}>
 			<TRPCProvider trpcClient={trpcClient} queryClient={queryClient}>
-				{children}
+				<IntlProvider
+					locale={locale}
+					messages={messages}
+					onError={() => {}} // Prevent SSR hydration errors
+				>
+					{children}
+				</IntlProvider>
 				<ReactQueryDevtools initialIsOpen={false} />
 			</TRPCProvider>
 		</QueryClientProvider>

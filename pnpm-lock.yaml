@@ -86,6 +86,9 @@ importers:
       react-hook-form:
         specifier: ^7.54.2
         version: 7.54.2(react@19.1.0)
+      react-intl:
+        specifier: ^7.1.11
+        version: 7.1.11(react@19.1.0)(typescript@5.8.2)
       react-resizable-panels:
         specifier: ^2.1.7
         version: 2.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -114,6 +117,12 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^3
         version: 3.2.6(react@19.1.0)(storybook@8.6.9)
+      '@formatjs/cli':
+        specifier: ^6.7.1
+        version: 6.7.1
+      '@formatjs/ts-transformer':
+        specifier: ^3.13.34
+        version: 3.13.34
       '@hono/vite-dev-server':
         specifier: ^0.19.1
         version: 0.19.1(hono@4.7.4)
@@ -1066,6 +1075,37 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@formatjs/cli@6.7.1':
+    resolution: {integrity: sha512-ULiXbLkbuTyd8f0qaByu1Nuc+jbAOLH1qRAtHZ7waIABQGPBB93OQ2FFtQPgoYoupKOKyNr+PZXR6pOT45E4EQ==}
+    engines: {node: '>= 16'}
+    hasBin: true
+    peerDependencies:
+      '@glimmer/env': ^0.1.7
+      '@glimmer/reference': ^0.94.0
+      '@glimmer/syntax': ^0.94.9
+      '@glimmer/validator': ^0.94.0
+      '@vue/compiler-core': ^3.5.12
+      content-tag: ^3.0.0
+      ember-template-recast: ^6.1.5
+      vue: ^3.5.12
+    peerDependenciesMeta:
+      '@glimmer/env':
+        optional: true
+      '@glimmer/reference':
+        optional: true
+      '@glimmer/syntax':
+        optional: true
+      '@glimmer/validator':
+        optional: true
+      '@vue/compiler-core':
+        optional: true
+      content-tag:
+        optional: true
+      ember-template-recast:
+        optional: true
+      vue:
+        optional: true
+
   '@formatjs/ecma402-abstract@2.3.4':
     resolution: {integrity: sha512-qrycXDeaORzIqNhBOx0btnhpD1c+/qFIHAN9znofuMJX6QBwtbrmlpWfD4oiUUD2vJUOIYFA/gYtg2KAMGG7sA==}
 
@@ -1080,6 +1120,22 @@ packages:
 
   '@formatjs/intl-localematcher@0.6.1':
     resolution: {integrity: sha512-ePEgLgVCqi2BBFnTMWPfIghu6FkbZnnBVhO2sSxvLfrdFw7wCHAHiDoM2h4NRgjbaY7+B7HgOLZGkK187pZTZg==}
+
+  '@formatjs/intl@3.1.6':
+    resolution: {integrity: sha512-tDkXnA4qpIFcDWac8CyVJq6oW8DR7W44QDUBsfXWIIJD/FYYen0QoH46W7XsVMFfPOVKkvbufjboZrrWbEfmww==}
+    peerDependencies:
+      typescript: ^5.6.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@formatjs/ts-transformer@3.13.34':
+    resolution: {integrity: sha512-N1n7dA+6dfHn/LDQXrUPOC90Z+7dsDB5cQIJeIysVwGhk8PRyYo2eaotDszZMjQp8+hvs98kJyekn1X7mK1yHQ==}
+    peerDependencies:
+      ts-jest: ^29
+    peerDependenciesMeta:
+      ts-jest:
+        optional: true
 
   '@hexagon/base64@1.1.28':
     resolution: {integrity: sha512-lhqDEAvWixy3bZ+UOYbPwUbBkwBq5C1LAJ/xPC8Oi+lL54oyakv/npbA0aU2hgCsx/1NUd4IBvV03+aUBWxerw==}
@@ -2331,6 +2387,9 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/hoist-non-react-statics@3.3.6':
+    resolution: {integrity: sha512-lPByRJUer/iN/xa4qpyL0qmL11DqNW81iU/IG1S3uvRUq4oKagz8VCxZjiWkumgt66YT3vOdDgZ0o32sGKtCEw==}
+
   '@types/istanbul-lib-coverage@2.0.6':
     resolution: {integrity: sha512-2QF/t/auWm0lsy8XtKVPG19v3sSOQlJe/YHZgfjb/KBBHOGSV+J2q/S671rcq9uTBrLAXmZpqJiaQbMT+zNU1w==}
 
@@ -2343,11 +2402,18 @@ packages:
   '@types/jest@29.5.14':
     resolution: {integrity: sha512-ZN+4sdnLUbo8EVvVc2ao0GFW6oVrQRPn4K2lglySj7APvSrgzxHiNNK99us4WDMi57xxA2yggblIAMNhXOotLQ==}
 
+  '@types/json-stable-stringify@1.2.0':
+    resolution: {integrity: sha512-PEHY3ohqolHqAzDyB1+31tFaAMnoLN7x/JgdcGmNZ2uvtEJ6rlFCUYNQc0Xe754xxCYLNGZbLUGydSE6tS4S9A==}
+    deprecated: This is a stub types definition. json-stable-stringify provides its own type definitions, so you do not need this installed.
+
   '@types/mdx@2.0.13':
     resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
 
   '@types/node@18.19.79':
     resolution: {integrity: sha512-90K8Oayimbctc5zTPHPfZloc/lGVs7f3phUAAMcTgEPtg8kKquGZDERC8K4vkBYkQQh48msiYUslYtxTWvqcAg==}
+
+  '@types/node@22.15.28':
+    resolution: {integrity: sha512-I0okKVDmyKR281I0UIFV7EWAWRnR0gkuSKob5wVcByyyhr7Px/slhkQapcYX4u00ekzNWaS1gznKZnuzxwo4pw==}
 
   '@types/pg@8.11.11':
     resolution: {integrity: sha512-kGT1qKM8wJQ5qlawUrEkXgvMSXoV213KfMGXcwfDwUIfUHXqXYXOfS1nE1LINRJVVVx5wCm70XnFlMHaIcQAfw==}
@@ -3150,6 +3216,9 @@ packages:
   headers-polyfill@4.0.3:
     resolution: {integrity: sha512-IScLbePpkvO846sIwOtOTDjutRMWdXdJmXdMvk6gCBHxFO8d+QKOQedyZSxFTTFYRSmlgSTDtXqqq4pcenBXLQ==}
 
+  hoist-non-react-statics@3.3.2:
+    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
+
   hono@4.7.4:
     resolution: {integrity: sha512-Pst8FuGqz3L7tFF+u9Pu70eI0xa5S3LPUmrNd5Jm8nTHze9FxLTK9Kaj5g/k4UcwuJSXTP65SyHOPLrffpcAJg==}
     engines: {node: '>=16.9.0'}
@@ -3243,6 +3312,9 @@ packages:
     resolution: {integrity: sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==}
     engines: {node: '>=8'}
 
+  isarray@2.0.5:
+    resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==}
+
   isbot-fast@1.2.0:
     resolution: {integrity: sha512-twjuQzy2gKMDVfKGQyQqrx6Uy4opu/fiVUTTpdqtFsd7OQijIp5oXvb27n5EemYXaijh5fomndJt/SPRLsEdSg==}
     engines: {node: '>=6.0.0'}
@@ -3321,6 +3393,10 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
+  json-stable-stringify@1.3.0:
+    resolution: {integrity: sha512-qtYiSSFlwot9XHtF9bD9c7rwKjr+RecWT//ZnPvSmEjpV5mmPOCN4j8UjY5hbjNkOwZ/jQv3J6R1/pL7RwgMsg==}
+    engines: {node: '>= 0.4'}
+
   json5@2.2.3:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
@@ -3328,6 +3404,9 @@ packages:
 
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+
+  jsonify@0.0.1:
+    resolution: {integrity: sha512-2/Ki0GcmuqSrgFyelQq9M05y7PS0mEwuIzrf3f1fPqkVDVRvZrPZtVSMHxdgo8Aq0sxAOb/cr2aqqA3LeWHVPg==}
 
   kleur@3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
@@ -3548,6 +3627,10 @@ packages:
 
   nwsapi@2.2.18:
     resolution: {integrity: sha512-p1TRH/edngVEHVbwqWnxUViEmq5znDvyB+Sik5cmuLpGOIfDf/39zLiq3swPF8Vakqn+gvNiOQAZu8djYlQILA==}
+
+  object-keys@1.1.1:
+    resolution: {integrity: sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==}
+    engines: {node: '>= 0.4'}
 
   obuf@1.1.2:
     resolution: {integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==}
@@ -3805,6 +3888,18 @@ packages:
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
+
+  react-intl@7.1.11:
+    resolution: {integrity: sha512-tnVoRCWvW5Ie2ikYSdPF7z3+880yCe/9xPmitFeRPw3RYDcCfR4m8ZYa4MBq19W4adt9Z+PQA4FaMBCJ7E+HCQ==}
+    peerDependencies:
+      react: 16 || 17 || 18 || 19
+      typescript: ^5.6.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  react-is@16.13.1:
+    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
   react-is@17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
@@ -4173,6 +4268,9 @@ packages:
 
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   universalify@0.2.0:
     resolution: {integrity: sha512-CJ1QgKmNg3CwvAv/kOFmtnEN05f0D/cn9QntgNOQlQF9dgvVTHj3t+8JPdjqawCHk7V/KA+fbUqzZ9XWhcqPUg==}
@@ -5072,6 +5170,8 @@ snapshots:
   '@esbuild/win32-x64@0.25.0':
     optional: true
 
+  '@formatjs/cli@6.7.1': {}
+
   '@formatjs/ecma402-abstract@2.3.4':
     dependencies:
       '@formatjs/fast-memoize': 2.2.7
@@ -5097,6 +5197,26 @@ snapshots:
   '@formatjs/intl-localematcher@0.6.1':
     dependencies:
       tslib: 2.8.1
+
+  '@formatjs/intl@3.1.6(typescript@5.8.2)':
+    dependencies:
+      '@formatjs/ecma402-abstract': 2.3.4
+      '@formatjs/fast-memoize': 2.2.7
+      '@formatjs/icu-messageformat-parser': 2.11.2
+      intl-messageformat: 10.7.16
+      tslib: 2.8.1
+    optionalDependencies:
+      typescript: 5.8.2
+
+  '@formatjs/ts-transformer@3.13.34':
+    dependencies:
+      '@formatjs/icu-messageformat-parser': 2.11.2
+      '@types/json-stable-stringify': 1.2.0
+      '@types/node': 22.15.28
+      chalk: 4.1.2
+      json-stable-stringify: 1.3.0
+      tslib: 2.8.1
+      typescript: 5.8.2
 
   '@hexagon/base64@1.1.28': {}
 
@@ -6832,6 +6952,11 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/hoist-non-react-statics@3.3.6':
+    dependencies:
+      '@types/react': 19.0.10
+      hoist-non-react-statics: 3.3.2
+
   '@types/istanbul-lib-coverage@2.0.6': {}
 
   '@types/istanbul-lib-report@3.0.3':
@@ -6847,11 +6972,19 @@ snapshots:
       expect: 29.7.0
       pretty-format: 29.7.0
 
+  '@types/json-stable-stringify@1.2.0':
+    dependencies:
+      json-stable-stringify: 1.3.0
+
   '@types/mdx@2.0.13': {}
 
   '@types/node@18.19.79':
     dependencies:
       undici-types: 5.26.5
+
+  '@types/node@22.15.28':
+    dependencies:
+      undici-types: 6.21.0
 
   '@types/pg@8.11.11':
     dependencies:
@@ -7684,6 +7817,10 @@ snapshots:
   headers-polyfill@4.0.3:
     optional: true
 
+  hoist-non-react-statics@3.3.2:
+    dependencies:
+      react-is: 16.13.1
+
   hono@4.7.4: {}
 
   html-encoding-sniffer@4.0.0:
@@ -7774,6 +7911,8 @@ snapshots:
   is-wsl@2.2.0:
     dependencies:
       is-docker: 2.2.1
+
+  isarray@2.0.5: {}
 
   isbot-fast@1.2.0: {}
 
@@ -7883,6 +8022,14 @@ snapshots:
 
   jsesc@3.1.0: {}
 
+  json-stable-stringify@1.3.0:
+    dependencies:
+      call-bind: 1.0.8
+      call-bound: 1.0.4
+      isarray: 2.0.5
+      jsonify: 0.0.1
+      object-keys: 1.1.1
+
   json5@2.2.3: {}
 
   jsonfile@6.1.0:
@@ -7890,6 +8037,8 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
+
+  jsonify@0.0.1: {}
 
   kleur@3.0.3: {}
 
@@ -8082,6 +8231,8 @@ snapshots:
   node-releases@2.0.19: {}
 
   nwsapi@2.2.18: {}
+
+  object-keys@1.1.1: {}
 
   obuf@1.1.2: {}
 
@@ -8412,6 +8563,22 @@ snapshots:
   react-hook-form@7.54.2(react@19.1.0):
     dependencies:
       react: 19.1.0
+
+  react-intl@7.1.11(react@19.1.0)(typescript@5.8.2):
+    dependencies:
+      '@formatjs/ecma402-abstract': 2.3.4
+      '@formatjs/icu-messageformat-parser': 2.11.2
+      '@formatjs/intl': 3.1.6(typescript@5.8.2)
+      '@types/hoist-non-react-statics': 3.3.6
+      '@types/react': 19.0.10
+      hoist-non-react-statics: 3.3.2
+      intl-messageformat: 10.7.16
+      react: 19.1.0
+      tslib: 2.8.1
+    optionalDependencies:
+      typescript: 5.8.2
+
+  react-is@16.13.1: {}
 
   react-is@17.0.2: {}
 
@@ -8798,6 +8965,8 @@ snapshots:
   uncrypto@0.1.3: {}
 
   undici-types@5.26.5: {}
+
+  undici-types@6.21.0: {}
 
   universalify@0.2.0:
     optional: true

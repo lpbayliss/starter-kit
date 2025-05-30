@@ -1,0 +1,7 @@
+{
+	"home.title": "Welcome",
+	"home.description": "This is the home page",
+	"todo.add": "Add Todo",
+	"todo.placeholder": "Enter todo item...",
+	"todo.empty": "No todos yet"
+}
