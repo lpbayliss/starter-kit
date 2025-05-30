@@ -1,18 +1,15 @@
-import type { PageContextBuiltIn } from "vike/types";
+import type { PageContextServer } from "vike/types";
 import { isValidLocale, DEFAULT_LOCALE } from "../i18n/config";
 
-export function onBeforeRoute(pageContext: PageContextBuiltIn) {
-	// Priority: Cookie > Accept-Language > Default
+export function onBeforeRoute(pageContext: PageContextServer) {
 	const cookieLocale = parseCookieLocale(pageContext.headers?.cookie);
 	const browserLocale = parseAcceptLanguage(
 		pageContext.headers?.["accept-language"],
 	);
-	const locale = cookieLocale || browserLocale || DEFAULT_LOCALE;
 
 	return {
 		pageContext: {
-			locale,
-			// Clean URLs without locale parameters
+			locale: cookieLocale || browserLocale || DEFAULT_LOCALE,
 			urlLogical: pageContext.urlParsed.pathname,
 		},
 	};
